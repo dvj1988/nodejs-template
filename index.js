@@ -1,7 +1,7 @@
-const circle = require("./circle");
-const Square = require("./square");
+const express = require("express");
+const app = express();
+const port = 3000;
 
-const sq = new Square(10);
+app.get("/", (req, res) => res.send("Hello World!"));
 
-console.log(`The area of a square of side 10 is ${sq.area()}`);
-console.log(`The area of a circle of radius 4 is ${circle.area(4)}`);
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
