@@ -1,9 +1,9 @@
 -- users orders, items, order_items
 SET FOREIGN_KEY_CHECKS=0;
 
-DROP DATABASE IF EXISTS nodejs_training;
-CREATE DATABASE nodejs_training;
-USE nodejs_training;
+DROP DATABASE IF EXISTS shop_db;
+CREATE DATABASE shop_db;
+USE shop_db;
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
