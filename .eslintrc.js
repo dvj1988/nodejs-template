@@ -14,5 +14,15 @@ module.exports = {
   },
   rules: {
     camelcase: ['error', { allow: [''] }],
+    'comma-dangle': [
+      'error',
+      {
+        arrays: 'never',
+        objects: 'never',
+        imports: 'never',
+        exports: 'never',
+        functions: 'never',
+      },
+    ],
   },
 };
