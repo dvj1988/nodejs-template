@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const routes = require("./lib/routes");
-const { userRepository } = require("./lib/repositories");
+const { userRepository, itemRepository } = require("./lib/repositories");
 
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: true })); // for parsing application/x-ww
 app.use((req, res, next) => {
   // Add authentication middleware here
   res.locals.userRepository = userRepository;
+  res.locals.itemRepository = itemRepository;
   next();
 });
 
