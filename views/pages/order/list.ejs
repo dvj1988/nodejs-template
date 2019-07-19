@@ -31,6 +31,21 @@
           <% }) %>
         </tbody>
       </table>
+      <div class="align-center">
+        <a
+          class="button-outline vertical-middle  <%= !pageInfo.hasPrevPage ? 'disabled': '' %>"
+          href="<%= pageInfo.hasPrevPage ? '/items?pageNumber=' + (pageNumber - 1): '#' %>"
+          ><</a
+        >
+        <span class="page-info vertical-middle "
+          ><%= pageInfo.pageNumber%> / <%= pageInfo.totalPages%></span
+        >
+        <a
+          class="button-outline vertical-middle  <%= !pageInfo.hasNextPage ? 'disabled': '' %>"
+          href="<%= pageInfo.hasNextPage ? '/items?pageNumber=' + (pageNumber + 1): '#' %>"
+          >></a
+        >
+      </div>
     </main>
     <% include ../../partials/footer %>
   </body>
