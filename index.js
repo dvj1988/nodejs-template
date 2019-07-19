@@ -10,6 +10,8 @@ app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.set('view engine', 'ejs');
 
+// static files
+app.use(express.static('public'));
 
 app.use((req, res, next) => {
   res.locals.userRepository = userRepository;
