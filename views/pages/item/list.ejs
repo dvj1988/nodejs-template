@@ -38,7 +38,7 @@
       <div class="align-center">
         <a
           class="button-outline vertical-middle  <%= !pageInfo.hasPrevPage ? 'disabled': '' %>"
-          href="<%= pageInfo.hasPrevPage ? '/items?pageNumber=' + (pageNumber - 1): '#' %>"
+          href="<%= pageInfo.hasPrevPage ? '/items?pageNumber=' + (pageInfo.pageNumber - 1): '#' %>"
           ><</a
         >
         <span class="page-info vertical-middle "
@@ -46,7 +46,7 @@
         >
         <a
           class="button-outline vertical-middle  <%= !pageInfo.hasNextPage ? 'disabled': '' %>"
-          href="<%= pageInfo.hasNextPage ? '/items?pageNumber=' + (pageNumber + 1): '#' %>"
+          href="<%= pageInfo.hasNextPage ? '/items?pageNumber=' + (pageInfo.pageNumber + 1): '#' %>"
           >></a
         >
       </div>
