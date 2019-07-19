@@ -7,6 +7,34 @@
     <% include ../../partials/header %>
     <main>
       <h1>Item list</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Actions</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% items.forEach(function(item) { %>
+          <tr>
+            <td>
+              <%= item.id %>
+            </td>
+            <td>
+              <%= item.name %>
+            </td>
+            <td>
+              <%= item.description %>
+            </td>
+            <td>
+              <a href="<%= '/items/' + item.id %>">View</a>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
     </main>
     <% include ../../partials/footer %>
   </body>

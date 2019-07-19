@@ -7,6 +7,30 @@
     <% include ../../partials/header %>
     <main>
       <h1>Order list</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>User Id</td>
+            <td>Actions</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% orders.forEach(function(order) { %>
+          <tr>
+            <td>
+              <%= order.id %>
+            </td>
+            <td>
+              <a href="<%= '/users/' + order.userId %>"><%= order.userId %></a>
+            </td>
+            <td>
+              <a href="<%= '/orders/' + order.id %>">View</a>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
     </main>
     <% include ../../partials/footer %>
   </body>

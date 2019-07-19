@@ -23,5 +23,12 @@ app.use((req, res, next) => {
 app.use('/', viewRoutes);
 app.use('/api', apiRoutes);
 
+app.use((req, res, next) => {
+  // Handle 404 cases
+  if (!res.headersSent) {
+    res.render('pages/404');
+  }
+});
+
 // eslint-disable-next-line no-console
 app.listen(port, () => console.log(`Shop app listening on port ${port}!`));

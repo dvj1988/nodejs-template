@@ -7,6 +7,20 @@
     <% include ../../partials/header %>
     <main>
       <h1>User Detail</h1>
+      <table class="table">
+        <tr>
+          <th class="align-left">Name</th>
+          <td>
+            <%= user.name %>
+          </td>
+        </tr>
+        <tr>
+          <th class="align-left">Email</th>
+          <td>
+            <%= user.email %>
+          </td>
+        </tr>
+      </table>
     </main>
     <% include ../../partials/footer %>
   </body>
