@@ -1,13 +1,22 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  padding: 20px;
+}
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  height: 60px;
 }
 
 nav ul li {
   float: left;
+  height: 100%;
 }
 
 nav ul li a {
@@ -16,9 +25,22 @@ nav ul li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  display: inline-block;
+  height: calc(100% - 28px);
+  line-height: 32px;
 }
 
 /* Change the link color to #111 (black) on hover */
 nav ul li a:hover {
   background-color: #111;
+}
+
+nav ul li.logo {
+  font-family: 'Lobster', cursive;
+  text-transform: lowercase;
+  font-size: 20px;
+}
+
+footer {
+  padding: 20px;
 }
