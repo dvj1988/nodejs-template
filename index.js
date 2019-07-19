@@ -26,8 +26,9 @@ app.use('/api', apiRoutes);
 app.use((req, res, next) => {
   // Handle 404 cases
   if (!res.headersSent) {
-    res.render('pages/404');
+    res.status(404).render('pages/404');
   }
+  return next();
 });
 
 // eslint-disable-next-line no-console
